@@ -8,10 +8,8 @@ import { RequestService } from '../../../services';
 })
 export class CustomerHomeComponent {
   constructor(private _requestService: RequestService) {
-    this.customerProfile = _requestService.getStylistById(0).subscribe(
-        res => console.log(res),
-        err => console.log(err)
-      );
+    this.customerProfile = _requestService.getStylistById(1)
+      .subscribe(res => res);
   }
 
   public customerProfile: any; //TODO: interface

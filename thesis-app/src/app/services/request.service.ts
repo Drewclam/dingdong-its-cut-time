@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
 import 'rxjs/Rx';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class RequestService {
@@ -18,9 +19,10 @@ export class RequestService {
   }
 
   getStylistById(id: number) {
-    return this.http.get(`/api/userStylist/${id}`)
+    return this.http.get(`http://localhost:1337/api/userstylist/${id}`)
       .map(
         (response: Response) => {
+          console.log(response);
           return response.json();
         }
       )
