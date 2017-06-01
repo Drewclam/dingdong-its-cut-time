@@ -27,11 +27,8 @@ export class RequestService {
   }
 
   getStylistByLocation(location: string) {
-    return this.http.get(`/api/stylists/location`)
-      .map(
-        (response: Response) => {
-          return response.json();
-        }
-      )
+    return this.http.get(`/api/stylists/${location}`)
+      .map((response: Response) => response.json())
+      .subscribe(data => data, err => console.log(err));
   }
 }

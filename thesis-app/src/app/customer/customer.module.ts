@@ -7,12 +7,13 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
 import { UiModule } from '../ui/ui.module';
 
 import { StripeService } from '../services';
+import { LocationService } from '../services';
 
 import {
   CustomerHomeComponent,
   CustomerNavbarComponent,
   CustomerDropDownComponent,
-  CustomerBookingListComponent,
+  CustomerNearbyListComponent,
   CustomerMapComponent,
   CustomerMessageComponent,
   CustomerInboxComponent,
@@ -34,14 +35,17 @@ import {
     CustomerHomeComponent,
     CustomerNavbarComponent,
     CustomerDropDownComponent,
-    CustomerBookingListComponent,
+    CustomerNearbyListComponent,
     CustomerMapComponent,
     CustomerMessageComponent,
     CustomerInboxComponent,
     StylistProfileComponent,
     CustomerProfileComponent
   ],
-  providers: [StripeService]
+  providers: [
+    StripeService,
+    LocationService
+  ]
 })
 
 export class CustomerModule {}

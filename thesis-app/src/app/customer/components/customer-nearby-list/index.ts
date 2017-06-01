@@ -1,0 +1,1 @@
+export * from './customer-nearby-list.component';
