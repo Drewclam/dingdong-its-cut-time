@@ -9,7 +9,7 @@ import { StripeService } from '../../../../services';
 export class PaymentInputComponent {
   constructor(private stripeService: StripeService) {}
 
-  @Input() customerName: string;
+  @Input() stylistName: string;
 
   public openCheckout() {
     const stripeService = this.stripeService;
@@ -25,7 +25,7 @@ export class PaymentInputComponent {
 
     handler.open({
       name: 'Ding Dong It\'s Cut Time',
-      description: `Payment method for: ${this.customerName}`,
+      description: `Payment to: ${this.stylistName}`,
       amount: 2000
     });
 
