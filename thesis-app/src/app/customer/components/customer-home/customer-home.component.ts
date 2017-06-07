@@ -39,7 +39,7 @@ export class CustomerHomeComponent implements OnInit {
     //   res => console.log(res),
     //   err => console.log(err)
     // );
-    
+
     this.customerProfile = this.stateService.customerProfile[0];
     this.isProfileFetched = true;
     this.getLocationCoordinates(this.latitude, this.longitude);
@@ -57,27 +57,27 @@ export class CustomerHomeComponent implements OnInit {
       .subscribe(data => {
         this.stylistsCloseToYou = data;
       }, err => console.log(err));
-    
+
     // Default location inititialization to sanfrancisco
-    this.stylistService.getStylistsInLocation('sanfrancisco')
-      .subscribe(data => {
-        this.stylistsCloseToYou = data;
-      }, err => console.log(err));
+    // this.stylistService.getStylistsInLocation('sanfrancisco')
+    //   .subscribe(data => {
+    //     this.stylistsCloseToYou = data;
+    //   }, err => console.log(err));
 
     // Fetch the currently logged in user
     // TODO: get id from router params passed down from login navigation
-    this.requestService.getStylistById(1)
-      .subscribe(
-        data => {
-          this.customerProfile = data;
-          console.log('fetch customer profile with hardcoded id 1: ', this.customerProfile);
-        },
-        err => console.log(err),
-        () => this.isProfileFetched = true
-      );
+    // this.requestService.getStylistById(1)
+    //   .subscribe(
+    //     data => {
+    //       this.customerProfile = data;
+    //       console.log('fetch customer profile with hardcoded id 1: ', this.customerProfile);
+    //     },
+    //     err => console.log(err),
+    //     () => this.isProfileFetched = true
+    //   );
 
-    // instead of using socket.io, check for bookings due on interval
-    setInterval(() => this.checkForBookingsDue(4), 5000);
+    // // instead of using socket.io, check for bookings due on interval
+    // setInterval(() => this.checkForBookingsDue(4), 5000);
   }
 
   onSearchLocationChange(location: string): void {
@@ -104,7 +104,7 @@ export class CustomerHomeComponent implements OnInit {
         err => console.log(err)
       );
   }
-  
+
   getLocationFromCoordinates(lat, lng) {
     this.locationService.getLocationFromCoordinates(lat, lng)
       .subscribe(res => {

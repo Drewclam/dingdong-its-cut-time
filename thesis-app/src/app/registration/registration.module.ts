@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FormBuilder } from '@angular/forms';
 
-import { StateService } from '../services';
+import { StateService, AuthService } from '../services';
 
 import {
   SignInFormComponent,
@@ -36,7 +36,8 @@ import {
   ],
   providers: [
     FormBuilder,
-    StateService
+    StateService,
+    AuthService
   ]
 })
 
