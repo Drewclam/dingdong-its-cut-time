@@ -19,12 +19,10 @@ export class StylistHomeComponent implements OnInit {
 
   ngOnInit() {
     this.stylistProfile = this.stateService.retrieveCustomer();
-
-    this.bookingService.fetchBookingsForStylist(this.stylistProfile.id)
+    this.bookings = this.bookingService.fetchBookingsForStylist(this.stylistProfile.id)
       .subscribe(
         data => this.bookings = data,
-        err => console.log(err),
-        () => this.isProfileFetched = true
+        err => console.log(err)
       );
   }
 

@@ -1,7 +1,6 @@
 <div *ngIf="!!isProfileFetched">
   <div class="container row">
     <customer-navbar
-      [customerId]="customerProfile.id"
       [searchLocation]="searchLocation"
       (locationChange)="onSearchLocationChange($event)"
     >

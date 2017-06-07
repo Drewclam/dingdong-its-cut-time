@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
 
 import { MessageService } from './message.service';
+import { BookingService } from './booking.service';
 
 let customerProfile;
 
 @Injectable()
 export class StateService {
 
-  constructor(private messageService: MessageService) {}
+  constructor(
+    private messageService: MessageService,
+    private bookingService: BookingService) {}
 
   addCustomer(stylist) {
     customerProfile = {

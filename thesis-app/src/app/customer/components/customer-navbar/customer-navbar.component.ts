@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { StylistService } from '../../../services';
 import { LocationService } from '../../../services';
+import { StateService } from '../../../services';
 
 @Component({
   selector: 'customer-navbar',
@@ -10,10 +11,10 @@ import { LocationService } from '../../../services';
 export class CustomerNavbarComponent {
   constructor(
     private stylistService: StylistService,
-    private locationService: LocationService
+    private locationService: LocationService,
+    private stateService: StateService
     ) {}
 
-  @Input() customerId: number;
   @Input() searchLocation: string;
   @Output() locationChange = new EventEmitter();
 
@@ -24,7 +25,7 @@ export class CustomerNavbarComponent {
   }
 
   public logo: string = 'put logo url here';
-  public currentCustomer: string = 'Matt';
+  public currentCustomer: string = this.stateService.retrieveCustomer().name;
   public isDropDownHidden: boolean = true;
 
 }

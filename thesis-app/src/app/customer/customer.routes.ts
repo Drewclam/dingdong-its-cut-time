@@ -17,11 +17,11 @@ export const customerRoutes: Routes = [
     component: CustomerMessageComponent
   },
   {
-    path: 'stylistProfile/:id',
+    path: 'stylistProfile',
     component: StylistProfileComponent
   },
   {
-    path: 'customerProfile/:id',
+    path: 'customerProfile',
     component: CustomerProfileComponent
   }
 ]
