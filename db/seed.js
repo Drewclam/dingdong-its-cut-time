@@ -238,7 +238,7 @@ const stylistArray = [
     'update': 'update me'
   },
   {
-    id: 0,
+    id: 1,
     'username': 'andrew',
     'password': 'lam',
     'location': '60 Queen St W, Toronto',
@@ -249,7 +249,7 @@ const stylistArray = [
     'update': 'update me'
   },
   {
-    id: 0,
+    id: 1,
     'username': 'parul',
     'password': 'bir',
     'location': 'San Jose',
@@ -321,6 +321,33 @@ const booksingsArray = [
     location: '375 11th St, San Francisco, CA'
   },
    {
+    name: 'andrew',
+    userid: 22,
+    stylistid: 25,
+    isconfirmed: 0,
+    isComplete: 0,
+    time: new Date(),
+    location: '3301 Lyon St, San Francisco, CA'
+  },
+  {
+    name: 'palaceoffinearts',
+    userid: 15,
+    stylistid: 25,
+    isconfirmed: 0,
+    isComplete: 0,
+    time: new Date(),
+    location: '3301 Lyon St, San Francisco, CA'
+  },
+  {
+    name: 'palaceoffinearts',
+    userid: 15,
+    stylistid: 25,
+    isconfirmed: 0,
+    isComplete: 0,
+    time: new Date(),
+    location: '3301 Lyon St, San Francisco, CA'
+  },
+  {
     name: 'palaceoffinearts',
     userid: 15,
     stylistid: 19,
@@ -369,6 +396,30 @@ const messagesArray = [
     id_recipient: 3,
     subjectHeading: 'idk',
     body: 'idk',
+    time: new Date(),
+    location: 'San Jose'
+  },
+  {
+    id_sender: 23,
+    id_recipient: 25,
+    subjectHeading: 'Hey ilke!!!!!',
+    body: 'Heyyyy, I heard you give great haircuts. LEMME AT \'EM',
+    time: new Date(),
+    location: 'San Jose'
+  },
+  {
+    id_sender: 25,
+    id_recipient: 23,
+    subjectHeading: 'Yeahhh of course! :D',
+    body: 'Sure thing! I\'ll be right over!!',
+    time: new Date(),
+    location: 'San Jose'
+  },
+  {
+    id_sender: 23,
+    id_recipient: 25,
+    subjectHeading: 'Thanks Ilke',
+    body: 'Okay! sounds good.',
     time: new Date(),
     location: 'San Jose'
   }
