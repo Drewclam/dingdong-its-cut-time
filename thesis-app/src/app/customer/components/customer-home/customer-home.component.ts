@@ -105,4 +105,8 @@ export class CustomerHomeComponent implements OnInit {
         }
       );
   }
+
+  removePaymentDiv(event) {
+    console.log('inside remove payment fn', event);
+  }
 }

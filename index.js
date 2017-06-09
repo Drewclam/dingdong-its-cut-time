@@ -49,7 +49,11 @@ app.post('/api/stripe', function(req, res) {
     source: token,
   }, function(err, charge) {
   // asynchronously called
-  console.log('error charging card ', err, charge);
+  if (err) {
+    console.log('error charging card ', err);
+    res.status(400);
+  }
+  res.status(200).json(charge);
   });
 });
 
