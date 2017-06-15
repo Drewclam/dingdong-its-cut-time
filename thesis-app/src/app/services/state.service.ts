@@ -64,7 +64,7 @@ export class StateService implements OnDestroy {
     clearInterval(this.fetchDueBookingsIntervalId);
     clearInterval(this.fetchConfirmedBookingsIntervalId);
     clearInterval(this.fetchPendingBookingsIntervalId);
-    customerProfile = null;
+    customerProfile = {};
   }
   messageTimer(id) {
     this.messageService.getMessages(id)
