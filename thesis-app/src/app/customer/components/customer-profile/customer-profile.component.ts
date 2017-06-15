@@ -65,11 +65,6 @@ export class CustomerProfileComponent implements OnInit {
       aboutMe: updateForm.aboutMe || this.profile.aboutMe
     };
 
-    // this.requestService.postUserImg(profile.id, )
-    //   .subscribe(
-    //     data => console.log(data),
-    //     err => console.log(err)
-    //   );
     // update the state
     this.stateService.updateCustomer(accountInformation);
     // refresh page state to reflect changes to user
@@ -82,18 +77,18 @@ export class CustomerProfileComponent implements OnInit {
       );
 
     // clear fields
-    this.name = '';
-    this.password = '';
-    this.email = '';
-    this.phonenumber = '';
-    this.billingaddress = '';
-    this.aboutMe = '';
+    this.name = null;
+    this.password = null;
+    this.email = null;
+    this.phonenumber = null;
+    this.billingaddress = null;
+    this.image_url = null;
+    this.aboutMe = null;
 
     this.showModal = false;
   }
 
   public getStyle() {
-    console.log(this.showModal);
     if (this.showModal === false) {
       return 'none';
     } else {
