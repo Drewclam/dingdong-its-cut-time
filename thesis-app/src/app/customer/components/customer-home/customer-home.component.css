@@ -1,9 +1,14 @@
 .componentWrapper {
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-family: 'Avenir Next';
 }
 
 .mainContainer {
   display: flex;
+}
+
+h2 {
+  font-weight: bold;
 }
 
 .stylistContainer {
@@ -29,6 +34,10 @@
 .inputContainer input {
   flex: 1 1 50%;
   border: 1px solid;
+}
+
+.inputContainer input {
+  outline: none;
 }
 
 .inputContainer button {

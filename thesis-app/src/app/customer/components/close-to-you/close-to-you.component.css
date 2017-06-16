@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-family: 'Avenir Next';
   margin-bottom: 2em;
   padding-bottom: 1em;
   border-bottom: 1px solid;
@@ -53,4 +54,14 @@
   margin-left: 1em;
   border-radius: 23px;
   border: 2px solid #F9B71A;
+}
+
+.buttonContainer button:hover {
+  background-color: #ffe096;
+  border: 2px solid #F9B71A;
+  color: #f7b109;
+}
+
+.buttonContainer button:focus {
+  outline: none;
 }
