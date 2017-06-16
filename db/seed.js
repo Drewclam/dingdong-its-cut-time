@@ -14,8 +14,8 @@ const stylistArray = [
     'email': 'Shari@gmail.com',
     'website': 'ShariStylists.com',
     'gender': 'F',
-    'image_url': 'http://forhimhairsalon.com/wp-content/uploads/2012/08/young-boy-haircut.jpg',
-    'update': 'update me'
+    'image_url': 'http://www.hemsworthcommunications.com/wp-content/uploads/2015/09/shari-bissoondatt.jpg',
+    'update': 'Hey guys, my name is Shari! I\'m new to this platform so be nice :) I currently live in San Ramon.'
   },
   {
     'type': 0,
@@ -26,7 +26,7 @@ const stylistArray = [
     'email': 'mateo@gmail.com',
     'website': 'MateoStyles.com',
     'gender': 'F',
-    'image_url': 'http://forhimhairsalon.com/wp-content/uploads/2012/08/young-boy-haircut.jpg',
+    'image_url': 'https://pbs.twimg.com/profile_images/2479384587/mateo.jpeg',
     'update': 'update me'
   },
   {
@@ -39,7 +39,7 @@ const stylistArray = [
     'website': 'ricflairwoo.com',
     'gender': 'M',
     'image_url': 'http://bit.ly/2rxURWu',
-    'update': 'update me'
+    'update': 'WOOOOOOOOOOOOOOO BABY! LOOK AT MY HAIR. LOOK AT IT! YOU CAN ALREADY SEE HOW GREAT IT IS BY THE NATURAL FLAIR WITHIN. '
   },
   {
     'type': 1,
