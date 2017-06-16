@@ -38,6 +38,10 @@
   margin-left: 1em;
 }
 
+h5 {
+  font-weight: bold;
+}
+
 .buttonContainer {
   display: flex;
   justify-content: flex-end;

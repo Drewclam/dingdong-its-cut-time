@@ -3,7 +3,8 @@
   height: 100%;
   display: flex;
   /*border: 2px solid red;*/
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-family: 'Avenir Next';
   border-bottom: 1px solid #b2b2b2;
 }
 
@@ -37,7 +38,7 @@
 }
 
 .profileImage {
-  /*margin-top: 2em;*/
+  margin-top: 2em;
   width: 100%;
   height: 100%;
   align-self: center;
@@ -51,6 +52,15 @@
   margin-left: 1em;
   flex: 1 1 50%;
   margin-bottom: 1em;
+}
+
+h5 {
+  font-weight: bold;
+  font-style: 18px;
+}
+
+h6 {
+  font-size: 14px;
 }
 
 .buttonContainer {
