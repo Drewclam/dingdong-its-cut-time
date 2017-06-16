@@ -4,8 +4,11 @@
   background-color: black;
   background-image: url('http://cdn.wallpapersafari.com/44/5/HQjIBU.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
-  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  /*font-family: 'Montserrat', sans-serif;*/
+  /*font-family: "Avenir Next"*/
 }
 
 .header {
@@ -38,6 +41,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 1em;
 }
 
 .flexItem input {

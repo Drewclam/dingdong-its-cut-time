@@ -1,3 +1,6 @@
 h1 {
-  color: #F9B71A
+  color: #F9B71A;
+  font-family: "Avenir Next";
+  font-size: 64px;
+  font-weight: bold;
 }
