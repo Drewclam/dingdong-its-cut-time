@@ -20,8 +20,17 @@
 
 .inputWrapper button {
   width: 18%;
-  border-radius: 35px;
+  border-radius: 23px;
   color: #ffffff;
   background-color: #F9B71A;
-  border: 1px solid #F9B71A;
+  border: 2px solid #F9B71A;
+}
+
+.inputWrapper button:hover {
+  background-color: #ffc232;
+  border: 2px solid #ffc232;
+}
+
+.inputWrapper button:focus {
+  outline: none;
 }

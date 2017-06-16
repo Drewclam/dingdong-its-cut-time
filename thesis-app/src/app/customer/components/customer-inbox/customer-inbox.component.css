@@ -23,10 +23,23 @@ h1 {
   justify-content: center;
 }
 
+h4:hover {
+  color: #e8e8e8;
+  cursor: pointer;
+}
+
 .spanContainer {
   flex: 1 1 40%;
   display: flex;
   justify-content: center;
+}
+
+.spanContainer span {
+  cursor: pointer;
+}
+
+.spanContainer span:hover {
+  color: red;
 }
 
 button {
