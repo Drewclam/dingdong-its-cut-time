@@ -9,15 +9,20 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+*:focus {
+  outline: none;
+}
+
 a {
   align-self: center;
   color: #F9B71A;
-  border-bottom: 1px solid #F9B71A;
+  /*border-bottom: 1px solid #F9B71A;*/
   margin-top: 1em;
 }
 
 a:hover{
   color: white;
+  text-decoration: none;
 }
 
 .header {
@@ -90,10 +95,15 @@ a:hover{
 .formItem2 button {
   background-color: #F9B71A;
   width: 20%;
-  border-radius: 20px;
+  border-radius: 23px;
   margin-right: 4em;
   margin-bottom: 1em;
-  border: 1px solid #F9B71A;
-};
+  border: 2px solid #F9B71A;
+}
+
+.formItem2 button:hover {
+  background-color: #ffc232;
+  border: 2px solid #ffc232;
+}
 
 
