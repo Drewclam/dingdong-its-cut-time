@@ -38,7 +38,7 @@ const stylistArray = [
     'email': 'rflair@gmail.com',
     'website': 'ricflairwoo.com',
     'gender': 'M',
-    'image_url': 'http://forhimhairsalon.com/wp-content/uploads/2012/08/young-boy-haircut.jpg',
+    'image_url': 'http://bit.ly/2rxURWu',
     'update': 'update me'
   },
   {
@@ -74,7 +74,7 @@ const stylistArray = [
     'email': 'someemail@gmail.com',
     'website': 'sanmateohigh.org',
     'gender': 'F',
-    'image_url': 'http://forhimhairsalon.com/wp-content/uploads/2012/08/young-boy-haircut.jpg',
+    'image_url': 'http://i.telegraph.co.uk/multimedia/archive/02399/hildur1_1__2399708b.jpg',
     'update': 'update me'
   },
   {
@@ -86,7 +86,7 @@ const stylistArray = [
     'email': 'dragonsgate@gmail.com',
     'website': 'welcometothedragon.com',
     'gender': 'M',
-    'image_url': 'http://forhimhairsalon.com/wp-content/uploads/2012/08/young-boy-haircut.jpg',
+    'image_url': 'http://bit.ly/2syR37z',
     'update': 'update me'
   },
   {
