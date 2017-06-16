@@ -25,7 +25,7 @@ export class BookingComponent {
   @Output() handleCancelComplete = new EventEmitter();
   @Output() handleAccept = new EventEmitter();
   @Output() handleAskForPay = new EventEmitter();
-  @Output() handlePay = new EventEmitter();
+  @Output() handlePayment = new EventEmitter();
 
   public email;
   @Input() isAccept: boolean = false;

@@ -23,7 +23,7 @@
 .loginWrapper {
   display: flex;
   flex-direction: row;
-  margin-top: 7em;
+  margin-top: 5em;
   /*margin-left: 2em;*/
   margin-right: 7em;
   height: 40vh;
@@ -99,18 +99,12 @@ button {
   height: 60%;
   border-radius: 20px;
   margin-top: 1em;
-  border: 1px solid #F9B71A;
+  border: 2px solid #F9B71A;
 }
 
 button:hover {
   background-color: #ffc232;
-  border: 1px solid #ffc232;
-}
-
-button:active {
-  background-color: #d39b15;
-  border: 1px solid #d39b15;
-  color: #ffe62d;
+  border: 2px solid #ffc232;
 }
 
 button:focus {

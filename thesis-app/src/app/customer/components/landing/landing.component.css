@@ -1,6 +1,7 @@
 .componentWrapper {
   height: 100vh;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-family: 'Avenir Next';
   /*border: 2px solid red;*/
 }
 
@@ -13,14 +14,30 @@
   height: 100%;
 }
 
+h2 {
+  font-weight: 600;
+}
+
 .apptContainer button {
   background-color: #F9B71A;
+  border: 1px solid #F9B71A;
   color: #ffffff;
-  height: 50%;
+  height: 60%;
   width: 15%;
   align-self: flex-end;
+  margin-top: 4em;
+  margin-right: 4em;
   /*margin-bottom: 1em;*/
   border-radius: 23px;
+}
+
+.apptContainer button:focus {
+  outline: none;
+}
+
+.apptContainer button:hover {
+  background-color: #ffc232;
+  border: 1px solid #ffc232;
 }
 
 .confirmedContainer {

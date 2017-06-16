@@ -43,9 +43,7 @@
           [phoneNumber]="dueBooking.phonenumber"
           [location]="dueBooking.location"
           [isPay]="true"
-          [stylistName]="dueBooking.name"
-          [bookingId]="dueBooking.id"
-          (handlePay)="payBooking(dueBooking.id, i)"
+          (handlePayment)="openCheckout(dueBooking.id, dueBooking.name, i)"
         >
         </booking>
       </div>
@@ -155,7 +153,7 @@
           [location]="pendingBooking.location"
           (handleDecline)="declineBooking(pendingBooking.id, i)"
           (handleAccept)="acceptBooking(pendingBooking.id, i)"
-          [isConfirmed]="true"
+          [isDecline]="true"
           [isAccept]="true"
         >
         </booking>

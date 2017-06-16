@@ -10,20 +10,14 @@
     <h6 class="glyphicon glyphicon-earphone"> Contact: {{phoneNumber}}</h6>
     <h6 class="glyphicon glyphicon-envelope"> Location: {{location}}</h6>
   </div>
-  <div class="buttonContainer" *ngIf="!isPay">
-    <button *ngIf="!!isAccept" (click)="handleAccept.emit()">Accept</button>
-    <button *ngIf="!!isDecline" (click)="handleDecline.emit()">Decline</button>
-    <button *ngIf="!!isHistory" (click)="handleClearHistory.emit()">Clear</button>
-    <button *ngIf="!!isCancel" (click)="handleCancel.emit()">Cancel</button>
-    <button *ngIf="!!isReady" (click)="handleComplete.emit()">Get paid!</button>
-    <button *ngIf="!!isCancelComplete || !!isConfirmed" (click)="handleCancelComplete.emit()">Cancel</button>
-  </div>
-  <div *ngIf="!!isPay" class="paymentInput">
-    <payment-input
-      (handleProcessedPayment)="handlePay.emit()"
-      [stylistName]="stylistName"
-      [bookingId]="bookingId"
-    >
-    </payment-input>
+  <div class="buttonContainer">
+    <button class="btn-invis" *ngIf="!!isCancel">asdfd</button>
+    <button class="btn-yellow" *ngIf="!!isAccept" (click)="handleAccept.emit()">Accept</button>
+    <button class="btn-cancel" *ngIf="!!isDecline" (click)="handleDecline.emit()">Decline</button>
+    <button class="btn-yellow" *ngIf="!!isReady" (click)="handleComplete.emit()">Get paid!</button>
+    <button class="btn-cancel" *ngIf="!!isCancel" (click)="handleCancel.emit()">Cancel</button>
+    <button class="btn-cancel" *ngIf="!!isPay" (click)="handlePayment.emit()">Pay</button>
+    <button class="btn-cancel" *ngIf="!!isCancelComplete || !!isConfirmed" (click)="handleCancelComplete.emit()">Cancel</button>
+    <button class="btn-cancel" *ngIf="!!isHistory" (click)="handleClearHistory.emit()">Clear</button>
   </div>
 </div>

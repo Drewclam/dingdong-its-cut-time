@@ -1,6 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import "rxjs/add/operator/takeWhile";
-import { StateService, BookingService } from '../../../services';
+import { StateService, BookingService, StripeService } from '../../../services';
 
 @Component({
   selector: 'landing',
@@ -10,7 +10,8 @@ import { StateService, BookingService } from '../../../services';
 export class LandingComponent implements OnDestroy {
   constructor(
     private stateService: StateService,
-    private bookingService: BookingService
+    private bookingService: BookingService,
+    private stripeService: StripeService
   ) {
     console.log('landing component state initialization: ', this.profile)
   }
@@ -47,12 +48,12 @@ export class LandingComponent implements OnDestroy {
   payBooking(id: number, index: number) {
     console.log('PAY BOOKING');
     this.profile.dueBookings.splice(index, 1);
-    this.bookingService.deleteBooking(id)
-      .takeWhile(() => this.alive)
-      .subscribe(
-        result => console.log(result),
-        err => console.log(err)
-      );
+    // this.bookingService.deleteBooking(id)
+    //   .takeWhile(() => this.alive)
+    //   .subscribe(
+    //     result => console.log(result),
+    //     err => console.log(err)
+    //   );
   }
 
   completeBooking(id: number, index: number) {
@@ -99,6 +100,37 @@ export class LandingComponent implements OnDestroy {
       .takeWhile(() => this.alive)
       .subscribe(
         result => console.log(result),
+        err => console.log(err)
+      );
+  }
+
+  openCheckout(id: number, name: string, index: number) {
+    var handler = (<any>window).StripeCheckout.configure({
+      key: 'pk_test_sQaWXln9tozJFEdLFrFHgNUU',
+      locale: 'auto',
+      token: (token: any) => {
+        // You can access the token ID with `token.id`.
+        // Get the token ID to your server-side code for use.
+        this.stripeService.postToken(token.id)
+          .subscribe(
+            data => this.emitPayment(id, index),
+            err => console.log(err)
+          );
+      },
+      name: 'It\'s Cut Time',
+      image: 'https://images.vexels.com/media/users/3/142424/isolated/lists/06653acc92d56535056c9ec4d6036ecf-scissors-haircut-blades.png'
+    });
+    handler.open({
+      description: `To: ${name}`,
+      amount: 2000
+    });
+  }
+
+  emitPayment(id: number, index: number) {
+    this.profile.dueBookings.splice(index, 1);
+    this.bookingService.putHistoryBooking(id)
+      .subscribe(
+        data => console.log(data),
         err => console.log(err)
       );
   }
